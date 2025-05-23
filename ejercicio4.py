@@ -38,3 +38,9 @@ for i in range(n):
     suma_fila = sum(matriz[i])
     print(f"Fila {i + 1}: {suma_fila}")
     
+# mostrar promedio de valor por columna
+print("\nPromedio de valores por columna:")
+for j in range(m):
+    suma_columna = sum(matriz[i][j] for i in range(n))
+    promedio_columna = suma_columna / n
+    print(f"Columna {j + 1}: {promedio_columna:.2f}")
