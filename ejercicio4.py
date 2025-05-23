@@ -13,3 +13,9 @@ def validar(mensaje):
             return num
         print("Valor inválido. Debe ser un número positivo menor que 10.\n")
         
+# input de n y m
+n = validar("Ingrese el número de filas de la matriz: ")
+m = validar("Ingrese el número de columnas de la matriz: ")
+
+# lista vacía para almacenar la matriz
+matriz = []
