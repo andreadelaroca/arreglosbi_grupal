@@ -17,7 +17,19 @@
 
 
 
-
-
 #Franklin Callejas
+
+# Definición de la función para limpiar la pantalla
+import os
+import time
+os.system('cls || clear')
+#Definimos las variables
+ABSA1 = [50000, 60000, 65000, 62000, 78000, 95000]     #Tienda1
+ABSA2 = [89000, 90000, 98000, 80000, 85000, 90000]     #Tienda2
+ABSA3 = [65000, 72000, 85000, 72000, 83000, 98000]     #Tienda3
+ABSA4 = [92000, 88000, 90000, 76000, 82000, 93000]     #Tienda4
+# Definimos la cantidad de meses y las listas de tiendas y ventas
+meses = 6
+tiendas = ["ABSA1", "ABSA2", "ABSA3", "ABSA4"]
+ventas = [ABSA1, ABSA2, ABSA3, ABSA4]
 
