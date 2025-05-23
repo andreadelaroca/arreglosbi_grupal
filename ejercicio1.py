@@ -34,7 +34,7 @@ tiendas = ["ABSA1", "ABSA2", "ABSA3", "ABSA4"]
 ventas = [ABSA1, ABSA2, ABSA3, ABSA4]
 
 # Definimos la función para calcular la venta total por tienda
-def total_ventas():
+def suma_todas_ventas():
     total=0                             
     for i in range (len(tiendas)):      #Recorremos las tiendas
         for j in range (meses):         #Recorremos los meses
@@ -42,7 +42,7 @@ def total_ventas():
     return total                        #Retornamos el total de ventas
 
 # Definimos la función para calcular la venta total por tienda
-def total_tienda(tienda):
+def total_por_tienda(tienda):
     total = 0
     for i in range (meses):            
         total += ventas[tienda][i]     #Sumamos las ventas
