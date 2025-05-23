@@ -13,7 +13,17 @@ def linealizar_por_columnas(matriz):
             
     return resultado
 matriz = [
-    [1, 2, 3, 7],
+    [1, 2, 3, 7],   # Definicion de la matriz
     [4, 5, 6, 8]
 ]
+
+print("Matriz original:") #Se imprime la matriz original
+for fila in matriz:
+    print(fila)
+    
+linealizada = linealizar_por_columnas(matriz) # Se llama la función de linealización y se guarda el resultado
+
+print("\nMatriz linealizada por columnas:") # Se imprime la matriz linealizada
+print(linealizada)
+
    
