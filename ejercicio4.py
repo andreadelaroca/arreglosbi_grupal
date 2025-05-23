@@ -19,3 +19,16 @@ m = validar("Ingrese el número de columnas de la matriz: ")
 
 # lista vacía para almacenar la matriz
 matriz = []
+
+# ingresar los elementos de la matriz
+for i in range(n):
+    matriz.append([])
+    for j in range(m):
+        elemento = int(input(f"Ingrese el elemento ({i + 1}), ({j + 1}): "))
+        matriz[i].append(elemento)
+
+# mostrar la matriz
+print("\nLa matriz es:")
+for fila in matriz:
+    print(fila)
+
