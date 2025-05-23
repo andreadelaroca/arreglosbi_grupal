@@ -71,3 +71,20 @@ def tienda_q_menos_vendio():
     return tienda                     #Retornamos la tienda que menos vendió 
 
 def menu():
+    print("Estado de cuenta de las Sucursales ABSA en el segundo semestre 2022")
+    print("---- Menu de opciones ----")
+    print("")
+    print("1. Venta total por todas las tiendas")
+    print("2. Venta total por tienda")
+    print("3. Tienda que más vendió en los 6 meses")
+    print("4. Tienda que menos vendió")
+    print("5. Salir")
+    print("")
+    try:           #Es para evitar errores cuando se ingresa una letra
+        opcion = int(input("Ingrese una opción\n-> "))
+        return opcion
+    except ValueError:
+        return -1  # Retorna -1 si se ingresa una letra
+    
+
+    
