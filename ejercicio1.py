@@ -49,3 +49,25 @@ def total_por_tienda(tienda):
     return total                       #Retornamos el total de ventas
 
 # Definimos la función para calcular la tienda que más vendió
+def tienda_mas_vendio():
+    max_venta=0
+    for i in range (len(tiendas)):
+        total = total_por_tienda(i)    #Llamamos a la función para calcular el total por tienda
+        if total > max_venta:           #Si el total es mayor que el máximo
+            max_venta = total           #Actualizamos el máximo
+            tienda = i                  #Guardamos la tienda
+    return tienda                     #Retornamos la tienda que mas vendio
+
+# Definimos la funcion para calcular la tienda que menos vendio
+#Lo mismo que la anterior pero con el mínimo
+def tienda_q_menos_vendio():
+    min_venta = float('inf')           #Inicializamos el minimo 
+                                       #Inf es para que no haya un numero menor que el infinito 
+    for i in range (len(tiendas)):
+        total = total_por_tienda(i)    #Llamamos a la función para calcular el total por tienda
+        if total < min_venta:           #Si el total es menor que el mínimo
+            min_venta = total           #Actualizamos el mínimo
+            tienda = i                  #Guardamos la tienda
+    return tienda                     #Retornamos la tienda que menos vendió 
+
+def menu():
