@@ -70,21 +70,27 @@ def tienda_q_menos_vendio():
             tienda = i                  #Guardamos la tienda
     return tienda                     #Retornamos la tienda que menos vendió 
 
-def menu():
-    print("Estado de cuenta de las Sucursales ABSA en el segundo semestre 2022")
-    print("---- Menu de opciones ----")
-    print("")
-    print("1. Venta total por todas las tiendas")
-    print("2. Venta total por tienda")
-    print("3. Tienda que más vendió en los 6 meses")
-    print("4. Tienda que menos vendió")
-    print("5. Salir")
-    print("")
-    try:           #Es para evitar errores cuando se ingresa una letra
-        opcion = int(input("Ingrese una opción\n-> "))
-        return opcion
-    except ValueError:
-        return -1  # Retorna -1 si se ingresa una letra
-    
+# Submenu para continuar o salir del menu
+def submenu():
+    while True: #Mientras sea verdadero
+        print("\n¿Qué desea hacer ahora?")
+        print("1. Volver al menú")
+        print("2. Salir del programa")
+        try:
+            opcion = int(input("Ingrese una opción\n-> "))
+            if opcion == 1:
+                return True  #Retorna verdadero para volver al menu
+            elif opcion == 2:
+                return False  #Retorna falso para salir del programa
+            else: #Si no es ninguna de las anteriores te muestra un mensaje
+                print("Opción no válida. Por favor, seleccione 1 o 2.")
+                time.sleep(2)
+                os.system('cls || clear')
+        except ValueError: #Si no es un numero te muestra un mensaje de error
+            print("Entrada no válida. Por favor, ingrese un número (1 o 2).")
+            time.sleep(2)
+            os.system('cls || clear')
+
 
     
+
