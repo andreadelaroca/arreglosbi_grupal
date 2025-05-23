@@ -1,9 +1,8 @@
-#Se desea realizar un programa en donde se capture el nombre y tres calificaciones para
-#5 estudiantes de la facultad de Ingeniería, y después se pueda procesar dándonos el
-#promedio final de cada uno de los alumnos, el resultado se mostrará en pantalla
+# Este programa captura el nombre y tres calificaciones de 5 estudiantes de la facultad de Ingeniería.
+# Luego, calcula el promedio de las calificaciones de cada estudiante y muestra los resultados en pantalla.
 
-
-# Lista para almacenar los datos de los estudiantes (nombre y promedio)
+# Lista bidimensional para almacenar los datos de los estudiantes
+# Cada fila representará un estudiante: [nombre, calificación1, calificación2, calificación3, promedio]
 estudiantes = []
 
 # Bucle para capturar los datos de 5 estudiantes
@@ -24,13 +23,14 @@ for i in range(5):
     # Calcular el promedio de las calificaciones del estudiante
     promedio = sum(calificaciones) / len(calificaciones)
     
-    # Agregar el nombre y el promedio del estudiante a la lista principal
-    estudiantes.append((nombre, promedio))
+    # Agregar el nombre, las calificaciones y el promedio del estudiante a la lista bidimensional
+    estudiantes.append([nombre] + calificaciones + [promedio])
 
 # Mostrar los promedios de los estudiantes en pantalla
 print("\nPromedios de los estudiantes:")
 for estudiante in estudiantes:
-    # Desempaquetar el nombre y el promedio de cada estudiante
-    nombre, promedio = estudiante
+    # El nombre está en la primera posición y el promedio en la última posición de cada fila
+    nombre = estudiante[0]
+    promedio = estudiante[-1]
     # Imprimir el nombre y el promedio con dos decimales
     print(f"{nombre}: {promedio:.2f}")
