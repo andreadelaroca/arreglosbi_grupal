@@ -108,5 +108,41 @@ def menu():
     except ValueError:
         return -1  #Retorna -1 si no es un numero
 
-    
+#Hacemos el menu principal
+def main():
+    while True:
+        os.system('cls || clear')  
+        opcion = menu()
+        
+        if opcion == 1:
+            print(f"La venta total por todas las tiendas es: {suma_todas_ventas():,} $")
+            time.sleep(3)
+            if not submenu():
+                break
+        elif opcion == 2:
+            for i in range(len(ventas)):
+                print(f"La venta total de la tienda {tiendas[i]} es: {total_tienda(i):,} $")
+            time.sleep(3)
+            if not submenu():
+                break
+        elif opcion == 3:
+            print(f"La tienda que más vendió es: {tiendas[tienda_mas_vendio()]} con {total_tienda(tienda_mas_vendio()):,} $")
+            time.sleep(3)
+            if not submenu():
+                break
+        elif opcion == 4:
+            print(f"La tienda que menos vendió es: {tiendas[tienda_menos_vendio()]} con {total_tienda(tienda_menos_vendio()):,} $")
+            time.sleep(3)
+            if not submenu():
+                break
+        elif opcion == 5:
+            print("Saliendo del programa...")
+            time.sleep(2)
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción entre 1 y 5.")
+            time.sleep(3)
+
+if __name__ == "__main__":
+    main()
 
