@@ -84,11 +84,11 @@ def submenu():
                 return False  #Retorna falso para salir del programa
             else: #Si no es ninguna de las anteriores te muestra un mensaje
                 print("Opción no válida. Por favor, seleccione 1 o 2.")
-                time.sleep(2)
+                time.sleep(1)
                 os.system('cls || clear')
         except ValueError: #Si no es un numero te muestra un mensaje de error
             print("Entrada no válida. Por favor, ingrese un número (1 o 2).")
-            time.sleep(2)
+            time.sleep(1)
             os.system('cls || clear')
 
 #Hacemos el menu principal
@@ -108,9 +108,9 @@ def menu():
     except ValueError:
         return -1  #Retorna -1 si no es un numero
 
-#Hacemos el menu principal
+#Hacemos la funcion principal
 def main():
-    while True:
+    while True: #Mientras sea verdadero
         os.system('cls || clear')  
         opcion = menu()
         
@@ -118,10 +118,10 @@ def main():
             print(f"La venta total por todas las tiendas es: {suma_todas_ventas():,} $")
             time.sleep(3)
             if not submenu():
-                break
+                break #Retorna falso para salir del programa
         elif opcion == 2:
             for i in range(len(ventas)):
-                print(f"La venta total de la tienda {tiendas[i]} es: {total_por_tienda(i):,} $")
+                print(f"La venta total de la tienda {tiendas[i]} es: {total_por_tienda(i):,} $") #Imprimimos el total por tienda
             time.sleep(3)
             if not submenu():
                 break
@@ -136,7 +136,8 @@ def main():
             if not submenu():
                 break
         elif opcion == 5:
-            print("Saliendo del programa...")
+            print("Saliendo del programa... Muchas gracias por usar el programa")
+            print("Hasta luego!")
             time.sleep(2)
             break
         else:
