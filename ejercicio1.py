@@ -91,6 +91,22 @@ def submenu():
             time.sleep(2)
             os.system('cls || clear')
 
+#Hacemos el menu principal
+def menu():
+    print("Estado de cuenta de las Sucursales ABSA en el segundo semestre 2022")
+    print("---- Menu de opciones ----")
+    print("")
+    print("1. Venta total por todas las tiendas")
+    print("2. Venta total por tienda")
+    print("3. Tienda que más vendió en los 6 meses")
+    print("4. Tienda que menos vendió")
+    print("5. Salir")
+    print("")
+    try:
+        opcion = int(input("Ingrese una opción\n-> "))
+        return opcion
+    except ValueError:
+        return -1  #Retorna -1 si no es un numero
 
     
 
