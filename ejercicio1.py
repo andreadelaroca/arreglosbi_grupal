@@ -42,3 +42,10 @@ def total_ventas():
     return total                        #Retornamos el total de ventas
 
 # Definimos la función para calcular la venta total por tienda
+def total_tienda(tienda):
+    total = 0
+    for i in range (meses):            
+        total += ventas[tienda][i]     #Sumamos las ventas
+    return total                       #Retornamos el total de ventas
+
+# Definimos la función para calcular la tienda que más vendió
