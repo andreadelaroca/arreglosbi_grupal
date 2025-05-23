@@ -121,17 +121,17 @@ def main():
                 break
         elif opcion == 2:
             for i in range(len(ventas)):
-                print(f"La venta total de la tienda {tiendas[i]} es: {total_tienda(i):,} $")
+                print(f"La venta total de la tienda {tiendas[i]} es: {total_por_tienda(i):,} $")
             time.sleep(3)
             if not submenu():
                 break
         elif opcion == 3:
-            print(f"La tienda que más vendió es: {tiendas[tienda_mas_vendio()]} con {total_tienda(tienda_mas_vendio()):,} $")
+            print(f"La tienda que más vendió es: {tiendas[tienda_mas_vendio()]} con {total_por_tienda(tienda_mas_vendio()):,} $")
             time.sleep(3)
             if not submenu():
                 break
         elif opcion == 4:
-            print(f"La tienda que menos vendió es: {tiendas[tienda_menos_vendio()]} con {total_tienda(tienda_menos_vendio()):,} $")
+            print(f"La tienda que menos vendió es: {tiendas[tienda_q_menos_vendio()]} con {total_por_tienda(tienda_q_menos_vendio()):,} $")
             time.sleep(3)
             if not submenu():
                 break
