@@ -44,3 +44,15 @@ for j in range(m):
     suma_columna = sum(matriz[i][j] for i in range(n))
     promedio_columna = suma_columna / n
     print(f"Columna {j + 1}: {promedio_columna:.2f}")
+
+# encontrar el mayor valor y su posición
+valor_maximo = matriz[0][0]
+
+# recorrer la matriz
+for fila in matriz:
+    for elemento in fila:
+        if elemento > valor_maximo:
+            valor_maximo = elemento
+            posicion = (matriz.index(fila), fila.index(elemento))
+
+print(f"\nEl valor máximo es {valor_maximo} en la posición {posicion[0] + 1}, {posicion[1] + 1}")
