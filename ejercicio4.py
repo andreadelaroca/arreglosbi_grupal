@@ -32,3 +32,9 @@ print("\nLa matriz es:")
 for fila in matriz:
     print(fila)
 
+# mostrar suma de valores para cada fila
+print("\nSuma de valores por fila:")
+for i in range(n):
+    suma_fila = sum(matriz[i])
+    print(f"Fila {i + 1}: {suma_fila}")
+    
